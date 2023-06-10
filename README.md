@@ -54,7 +54,7 @@ Your API key is linked to your private account. Keep your keys safe by following
 ## Additional information
 
 
-<a href="[https://example.com](https://flutterwave.com/donate/52fmexoynge8)"><img src="https://example.com/image.png" alt="Image Alt Text"></a>
+<a href="https://flutterwave.com/donate/52fmexoynge8"><img src="https://example.com/image.png" alt="Image Alt Text"></a>
 
 [Buy me a coffee](https://flutterwave.com/donate/52fmexoynge8)
 
