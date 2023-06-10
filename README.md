@@ -53,13 +53,10 @@ Your API key is linked to your private account. Keep your keys safe by following
 
 ## Additional information
 
+
+[![Image Alt Text](https://github.com/kayson3/moralis_flutter/assets/49036534/4111fa54-043e-4116-bdf0-002519c969e9)](https://flutterwave.com/donate/52fmexoynge8)
+
 [Buy me a coffee](https://flutterwave.com/donate/52fmexoynge8)
-
-<a href="https://example.com"><img src="[image_url](https://github.com/kayson3/moralis_flutter/assets/49036534/4111fa54-043e-4116-bdf0-002519c969e9)" alt="Image Alt Text"></a>
-
-<a href="https://flutterwave.com/donate/52fmexoynge8"><img src="https://github.com/kayson3/moralis_flutter/assets/49036534/4111fa54-043e-4116-bdf0-002519c969e9" alt="Image Alt Text" style="max-width: 80px; max-height: 30px;"></a>
-
-
 
 
 Support the development of this package and help us continue delivering high-quality solutions for the Flutter community! Your generous contributions enable us to invest more time and resources into enhancing, adding new features, and providing timely updates. By [donating](https://flutterwave.com/donate/52fmexoynge8), you become a valuable part of our journey towards creating an even better package for developers like you. Together, let's shape the future of Flutter development.
