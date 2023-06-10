@@ -9,7 +9,7 @@ We are working on implementing all moralis features
 Create account at [moralis](https://moralis.io/)
 Get your Web3 API key from the Moralis dashboard by going to one of your existing project > Settings > Secrets > Copy one of your secrets.
 
-# KEEP YOUR API KEY SAFE
+# keep your api key safe
 Your API key is linked to your private account. Keep your keys safe by following these best practices:
 
 1. Provide access only to those who need it
@@ -18,9 +18,6 @@ Your API key is linked to your private account. Keep your keys safe by following
 4. Don't embed your secret API key in web applications or in other places where the key could be easily obtained
 
 ## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
 
 ```dart
   // You need to set Apikey to use any of this package functions
@@ -58,4 +55,4 @@ to `/example` folder.
 [Buy me a coffee](https://flutterwave.com/donate/52fmexoynge8)
 
 Support the development of this package and help us continue delivering high-quality solutions for the Flutter community! Your generous contributions enable us to invest more time and resources into enhancing, adding new features, and providing timely updates. By [donating](https://flutterwave.com/donate/52fmexoynge8), you become a valuable part of our journey towards creating an even better package for developers like you. Together, let's shape the future of Flutter development.
-# moralis_flutter
+
