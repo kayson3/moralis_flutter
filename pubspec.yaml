@@ -3,11 +3,11 @@ description: A new Flutter package project.
 version: 0.0.1
 homepage:
 
-publish_to: "none"
+publish_to: "https://pub.dev"
 
-repository:
-  type: git
-  url: git://github.com/kayson3/moralis_flutter.git
+repository: https://github.com/kayson3/moralis_flutter
+  # type: git
+  # url: git://github.com/kayson3/moralis_flutter.git
 
 
 environment:
