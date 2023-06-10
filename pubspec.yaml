@@ -3,6 +3,13 @@ description: A new Flutter package project.
 version: 0.0.1
 homepage:
 
+publish_to: "none"
+
+repository:
+  type: git
+  url: git://github.com/kayson3/moralis_flutter.git
+
+
 environment:
   sdk: '>=2.19.6 <3.0.0'
   flutter: ">=1.17.0"
