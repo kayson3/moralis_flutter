@@ -3,7 +3,7 @@ description: A new Flutter package project.
 version: 0.0.1
 homepage:
 
-publish_to: "https://pub.dev"
+# publish_to: "https://pub.dev"
 
 repository: https://github.com/kayson3/moralis_flutter
   # type: git
