@@ -55,7 +55,7 @@ Your API key is linked to your private account. Keep your keys safe by following
 
 [Buy me a coffee](https://flutterwave.com/donate/52fmexoynge8)
 
-<a href="destination_url"><img src="https://github.com/kayson3/moralis_flutter/assets/49036534/4111fa54-043e-4116-bdf0-002519c969e9" alt="Image Alt Text" style="max-width: 100px; max-height: 50px;"></a>
+<a href="https://flutterwave.com/donate/52fmexoynge8"><img src="https://github.com/kayson3/moralis_flutter/assets/49036534/4111fa54-043e-4116-bdf0-002519c969e9" alt="Image Alt Text" style="max-width: 80px; max-height: 30px;"></a>
 
 
 
