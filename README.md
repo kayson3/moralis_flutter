@@ -53,7 +53,7 @@ Your API key is linked to your private account. Keep your keys safe by following
 
 ## Additional information
 
-[Buy me a coffee](https://flutterwave.com/donate/52fmexoynge8)![buymecofee](https://github.com/kayson3/moralis_flutter/assets/49036534/24d10341-6351-4ad4-9a9c-9d865fe6ee2b)
+[Buy me a coffee](https://flutterwave.com/donate/52fmexoynge8)![buymecofee](https://flutterwave.com/donate/52fmexoynge8)
 
 
 Support the development of this package and help us continue delivering high-quality solutions for the Flutter community! Your generous contributions enable us to invest more time and resources into enhancing, adding new features, and providing timely updates. By [donating](https://flutterwave.com/donate/52fmexoynge8), you become a valuable part of our journey towards creating an even better package for developers like you. Together, let's shape the future of Flutter development.
