@@ -52,9 +52,10 @@ Your API key is linked to your private account. Keep your keys safe by following
 ```
 
 ## Additional information
+![buymecofee](https://github.com/kayson3/moralis_flutter/assets/49036534/530c59f1-8485-4fa0-9e97-efc7ae772433)
 
 
-<a href="https://flutterwave.com/donate/52fmexoynge8"><img src="https://example.com/image.png" alt="Image Alt Text"></a>
+<a href="https://flutterwave.com/donate/52fmexoynge8"><img src="https://github.com/kayson3/moralis_flutter/assets/49036534/530c59f1-8485-4fa0-9e97-efc7ae772433" alt="Image Alt Text"></a>
 
 [Buy me a coffee](https://flutterwave.com/donate/52fmexoynge8)
 
