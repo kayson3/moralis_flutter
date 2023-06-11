@@ -5,9 +5,11 @@ import 'constant/constant.dart';
 
 /// Moralis
 class Moralis {
-  static setApiKey({required String apikey}) {
-    apiKey = apikey;
-  }
+  late final EvmApi evmApi;
 
-  static EvmApi evmApi = EvmApi();
+  Moralis({EvmApi? evmApi}) : evmApi = evmApi ?? EvmApi();
+
+  static void setApiKey({required String apikey}) {
+    Constants.apiKey = apikey;
+  }
 }

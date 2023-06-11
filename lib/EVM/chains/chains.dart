@@ -13,77 +13,41 @@ enum EvmChain {
   fantom,
   cronos,
   palm,
-  arbitrum
+  arbitrum,
 }
 
-class Evmchain {
-  static getChainId({required EvmChain chaintype}) {
-    switch (chaintype) {
-      case EvmChain.ethereum:
-        return 1;
-      case EvmChain.ropsten:
-        return 3;
-      case EvmChain.rinkeby:
-        return 4;
-      case EvmChain.goerli:
-        return 5;
-      case EvmChain.kovan:
-        return 42;
-      case EvmChain.sepolia:
-        return 11155111;
-      case EvmChain.polygon:
-        return 137;
-      case EvmChain.mumbai:
-        return 80001;
-      case EvmChain.bsc:
-        return 56;
-      case EvmChain.bsctestnet:
-        return 97;
-      case EvmChain.avalanche:
-        return 43114;
-      case EvmChain.fantom:
-        return 250;
-      case EvmChain.cronos:
-        return 25;
-      case EvmChain.palm:
-        return 11297108109;
-      case EvmChain.arbitrum:
-        return 42161;
-    }
-  }
+class ChainDetails {
+  final int id;
+  final String name;
 
-  static String getChain({required EvmChain chaintype}) {
-    switch (chaintype) {
-      case EvmChain.ethereum:
-        return 'eth';
-      case EvmChain.ropsten:
-        return EvmChain.ropsten.name;
-      case EvmChain.rinkeby:
-        return EvmChain.rinkeby.name;
-      case EvmChain.goerli:
-        return EvmChain.goerli.name;
-      case EvmChain.kovan:
-        return EvmChain.kovan.name;
-      case EvmChain.sepolia:
-        return EvmChain.sepolia.name;
-      case EvmChain.polygon:
-        return EvmChain.polygon.name;
-      case EvmChain.mumbai:
-        return EvmChain.mumbai.name;
-      case EvmChain.bsc:
-        return EvmChain.bsc.name;
-      case EvmChain.bsctestnet:
-        return 'bsc_testnet';
-      case EvmChain.avalanche:
-        return EvmChain.avalanche.name;
-      case EvmChain.fantom:
-        return EvmChain.fantom.name;
-      case EvmChain.cronos:
-        return EvmChain.cronos.name;
-      case EvmChain.palm:
-        return EvmChain.palm.name;
-      case EvmChain.arbitrum:
-        return EvmChain.arbitrum.name;
-    }
+  ChainDetails(this.id, this.name);
+}
+
+class EvmChainHelper {
+  static final Map<EvmChain, ChainDetails> _chainDetails = {
+    EvmChain.ethereum: ChainDetails(1, 'eth'),
+    EvmChain.ropsten: ChainDetails(3, 'ropsten'),
+    EvmChain.rinkeby: ChainDetails(4, 'rinkeby'),
+    EvmChain.goerli: ChainDetails(5, 'goerli'),
+    EvmChain.kovan: ChainDetails(42, 'kovan'),
+    EvmChain.sepolia: ChainDetails(11155111, 'sepolia'),
+    EvmChain.polygon: ChainDetails(137, 'polygon'),
+    EvmChain.mumbai: ChainDetails(80001, 'mumbai'),
+    EvmChain.bsc: ChainDetails(56, 'bsc'),
+    EvmChain.bsctestnet: ChainDetails(97, 'bsc_testnet'),
+    EvmChain.avalanche: ChainDetails(43114, 'avalanche'),
+    EvmChain.fantom: ChainDetails(250, 'fantom'),
+    EvmChain.cronos: ChainDetails(25, 'cronos'),
+    EvmChain.palm: ChainDetails(11297108109, 'palm'),
+    EvmChain.arbitrum: ChainDetails(42161, 'arbitrum'),
+  };
+
+  ///if the chaintype isn't found, getChainId will return -1.
+  static int getChainId({required EvmChain chaintype}) {
+    return _chainDetails[chaintype]?.id ?? -1;
+  }
+  ///if the chaintype isn't found, getChainName will return an empty string ('').
+  static String getChainName({required EvmChain chaintype}) {
+    return _chainDetails[chaintype]?.name ?? '';
   }
 }

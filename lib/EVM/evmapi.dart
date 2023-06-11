@@ -1,5 +1,8 @@
 import 'balance/balance.dart';
 
 class EvmApi {
-  Balance balance = Balance();
+  late final Balance balance;
+
+  EvmApi({Balance? balance})
+      : balance = balance ?? Balance();
 }
