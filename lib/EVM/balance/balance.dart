@@ -38,9 +38,8 @@ class Balance {
         Constants.logger.w(resData["message"]);
         throw resData["message"];
       } else {
-        return (int.parse(resData["balance"].toString().substring(0, 8)) /
-                divideby)
-            .toString();
+        return (double.parse(resData["balance"].toString()) / divideby)
+            .toStringAsFixed(8);
       }
     } catch (error) {
       Constants.logger.w(error);
