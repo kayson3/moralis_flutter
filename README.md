@@ -24,22 +24,34 @@ Your API key is linked to your private account. Keep your keys safe by following
 ## Usage
 
 ```dart
+ 
+//app entry point
+
+main() {
   // You need to set Apikey to use any of this package functions
   Moralis.setApiKey(apikey: 'xxxxxxxxxxxxxxxxxxxxx');
+}
 
-  //Get a wallet balance
-  String? nativeBalance = await Moralis.evmApi.balance.getNativeBalance(
+// Create a Moralis instance in class level or globally
+Moralis moralis = Moralis();
+
+todo() async {
+
+// Get a wallet balance.
+  String? nativeBalance = await moralis.evmApi.balance.getNativeBalance(
       chain: EvmChain.bsc, address: "0x2ed3dd3dede6fg77edfgd63df53df65");
   print(nativeBalance); // '0.5392'
 
-  //Get multi wallet balance
-  List? balances = await Moralis.evmApi.balance.getNativeBalanceMulti(
+// Get multi wallet balance.
+  List? balances = await moralis.evmApi.balance.getNativeBalanceMulti(
       chain: EvmChain.bsc,
       addresses: [
         "0x2ed3dd3dede6fg77edfgd63df53df65",
         "0x2ed3dd3dede6fg77edfgd63df53df65"
       ]);
-  print(balances); 
+  print(balances);
+}
+
   // [
   //   {
   //     "address": "0xa2e92ff56bee6ece711ecb976a988d216265bab5",
