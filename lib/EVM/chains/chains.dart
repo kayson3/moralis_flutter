@@ -43,11 +43,11 @@ class EvmChainHelper {
   };
 
   ///if the chaintype isn't found, getChainId will return -1.
-  static int getChainId(EvmChain chaintype) {
+  static int getChainId({required EvmChain chaintype}) {
     return _chainDetails[chaintype]?.id ?? -1;
   }
   ///if the chaintype isn't found, getChainName will return an empty string ('').
-  static String getChainName(EvmChain chaintype) {
+  static String getChainName({required EvmChain chaintype}) {
     return _chainDetails[chaintype]?.name ?? '';
   }
 }
