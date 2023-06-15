@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:moralis/EVM/chains/chains.dart';
+import 'package:moralis/EVM/transactions/models/model.dart';
 import 'package:moralis/moralis.dart';
 
 void main() {
@@ -26,5 +27,15 @@ void main() {
             chain: EvmChain.bsc,
             address: '0x8405b8721942ea462f8e0Cc3215591DAE5e1f660'),
         "0.00078905");
+
+    
+    final transaction = await moralis.evmApi.transaction.getTransactionByWallet(
+        chain: EvmChain.bsc,
+        address: '0x8405b8721942ea462f8e0Cc3215591DAE5e1f660');
+
+    expect(transaction, isNotNull);
+    expect(transaction, isList);
+    expect(transaction.length, greaterThan(0));
+    expect(transaction[0], isInstanceOf<Transaction>());
   });
 }
