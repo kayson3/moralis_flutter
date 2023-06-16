@@ -37,12 +37,12 @@ Moralis moralis = Moralis();
 
 todo() async {
 
-// Get a wallet balance.
+  // Get a wallet balance.
   String? nativeBalance = await moralis.evmApi.balance.getNativeBalance(
       chain: EvmChain.bsc, address: "0x2ed3dd3dede6fg77edfgd63df53df65");
   print(nativeBalance); // '0.5392'
 
-// Get multi wallet balance.
+  // Get multi wallet balance.
   List? balances = await moralis.evmApi.balance.getNativeBalanceMulti(
       chain: EvmChain.bsc,
       addresses: [
@@ -50,7 +50,17 @@ todo() async {
         "0x2ed3dd3dede6fg77edfgd63df53df65"
       ]);
   print(balances);
+
+  //Get transaction detail by wallet address
+  List<Transaction> transactions = await moralis.evmApi.transaction.getTransactionByWallet(
+    address: "0x2ed3dd3dede6fg77edfgd63df53df65",
+    chain: EvmChain.bsc,
+  ),
+
+  print(transactions.first.hash);
 }
+
+
 
   // [
   //   {
@@ -65,44 +75,7 @@ todo() async {
   //   }
   // ];
 
-  // Get Transactions of a wallet address 
-  class TransactionList extends StatelessWidget {
-  final String walletAddress;
-  final EvmChain chain;
-
-  TransactionList({required this.walletAddress, required this.chain});
-
-  @override
-  Widget build(BuildContext context) {
-    return FutureBuilder<List<Transaction>>(
-      future: Moralis().evmApi.transaction.getTransactionByWallet(
-        address: walletAddress,
-        chain: chain,
-      ),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return CircularProgressIndicator();
-        } else if (snapshot.hasError) {
-          return Text('Error: ${snapshot.error}');
-        } else {
-          final List<Transaction> transactions = snapshot.data ?? [];
-
-          return ListView.builder(
-            itemCount: transactions.length,
-            itemBuilder: (context, index) {
-              final Transaction transaction = transactions[index];
-              // Customize how each transaction is displayed in the list
-              return ListTile(
-                title: Text('Hash: ${transaction.hash}'),
-                subtitle: Text('From: ${transaction.fromAddress}, To: ${transaction.toAddress}'),
-              );
-            },
-          );
-        }
-      },
-    );
-  }
-}
+  
 ```
 
 ## Additional information
