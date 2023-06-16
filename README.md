@@ -37,12 +37,12 @@ Moralis moralis = Moralis();
 
 todo() async {
 
-// Get a wallet balance.
+  // Get a wallet balance.
   String? nativeBalance = await moralis.evmApi.balance.getNativeBalance(
       chain: EvmChain.bsc, address: "0x2ed3dd3dede6fg77edfgd63df53df65");
   print(nativeBalance); // '0.5392'
 
-// Get multi wallet balance.
+  // Get multi wallet balance.
   List? balances = await moralis.evmApi.balance.getNativeBalanceMulti(
       chain: EvmChain.bsc,
       addresses: [
@@ -50,7 +50,17 @@ todo() async {
         "0x2ed3dd3dede6fg77edfgd63df53df65"
       ]);
   print(balances);
+
+  //Get transaction detail by wallet address
+  List<Transaction> transactions = await moralis.evmApi.transaction.getTransactionByWallet(
+    address: "0x2ed3dd3dede6fg77edfgd63df53df65",
+    chain: EvmChain.bsc,
+  ),
+
+  print(transactions.first.hash);
 }
+
+
 
   // [
   //   {
@@ -64,6 +74,8 @@ todo() async {
   //     "balance_formatted": "0.539274471165071484"
   //   }
   // ];
+
+  
 ```
 
 ## Additional information
