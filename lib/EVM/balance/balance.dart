@@ -71,4 +71,29 @@ class Balance {
       return null;
     }
   }
+
+  Future<List?> getWalletTokenBalancesPrices({
+    required EvmChain chain,
+    required String address,
+  }) async {
+    final String chainn = EvmChainHelper.getChainName(chaintype: chain);
+    final Map<String, String> parameters = {
+      "chain": chainn,
+    };
+    try {
+      final response =
+          await _fetch("/wallets/$address/tokens", parameters: parameters);
+      final resData = jsonDecode(response.body);
+      Constants.logger.d(resData);
+      if (response.statusCode != 200) {
+        Constants.logger.w(resData["message"]);
+        throw resData["message"];
+      } else {
+        return resData["result"];
+      }
+    } catch (error) {
+      Constants.logger.w(error);
+      return null;
+    }
+  }
 }

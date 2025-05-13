@@ -1,6 +1,6 @@
 name: moralis
 description: A powerful Flutter package designed to simplify Web3 integration.
-version: 0.0.3+2
+version: 0.0.3+3
 homepage:
 
 # publish_to: "https://pub.dev"
@@ -18,8 +18,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.5
-  logger: ^1.4.0
+  http: ^1.3.0
+  logger: ^2.5.0
 
 dev_dependencies:
   flutter_test:
