@@ -2,9 +2,8 @@ import 'dart:convert';
 import '../../constant/constant.dart';
 import 'package:http/http.dart' as http;
 import '../chains/chains.dart';
-import 'models/model.dart';
 
-class Transactions {
+class NFT {
   final _client = http.Client();
 
   Future<http.Response> _fetch(
@@ -24,31 +23,27 @@ class Transactions {
     );
   }
 
-  Future<List<Transaction>> getTransactionByWallet({
-    required String address,
+  Future<List?> getNFT({
     required EvmChain chain,
+    required String address,
   }) async {
-    final String chainName = EvmChainHelper.getChainName(chaintype: chain);
+    final String chainn = EvmChainHelper.getChainName(chaintype: chain);
+    final Map<String, String> parameters = {
+      "chain": chainn,
+    };
     try {
-      final response = await _fetch(address, parameters: {"chain": chainName});
-      final responseData = jsonDecode(response.body);
-      Constants.logger.d(responseData);
+      final response = await _fetch("$address/nft", parameters: parameters);
+      final resData = jsonDecode(response.body);
+      // Constants.logger.d(resData);
       if (response.statusCode != 200) {
-        Constants.logger.w(responseData["message"]);
-        throw responseData["message"];
+        Constants.logger.w(resData["message"]);
+        throw resData["message"];
       } else {
-        if (responseData is Map<String, dynamic>) {
-          final apiResponse = ApiResponse.fromJson(responseData);
-          final transactions = apiResponse.result;
-          if (transactions.isNotEmpty) {
-            return transactions;
-          }
-        }
+        return resData["result"];
       }
     } catch (error) {
       Constants.logger.w(error);
-      return [];
+      return null;
     }
-    return [];
   }
 }
